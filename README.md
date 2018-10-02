@@ -12,7 +12,7 @@ void display_values(int values[], int size) {
 }
 ```
 
-If you notice, the array parameter called `values` does not provide the size of the array. For a 1-dimensional array, the compiler is able to use the array even without its maximum size which makes functions more flexible. However, we still need the `size` parameter because it is the only way to know which indices of the array are safe to access. 
+If you notice, the array parameter called `values` does not provide the size of the array. For a 1-dimensional array, the compiler is able to use the array even without its maximum size which makes functions more flexible. However, we still need the `size` parameter because it is the only way to know which indices of the array are safe to access.
 
 If you look at the example, `size` is used to control the for-loop that accesses the array's elements. Take note that the `size` parameter may not necessarily be the maximum size of the array. Imagine an array with 100 elements, but currently there are only 8 elements in the array whose values were assigned. When we pass 8 as the array's size, then the function would only work with the first 8 elements instead of the entire 100.
 
@@ -22,9 +22,9 @@ Below is an example of how `display_values` can be called. Take note that we use
 int main() {
   int arr_values[3];
   arr_values[0] = 1;
-  arr_values[0] = 5;
-  arr_values[0] = 10;
-  
+  arr_values[1] = 5;
+  arr_values[2] = 10;
+
   display_values(arr_values, 3);
   return 0;
 }
@@ -53,10 +53,10 @@ int main() {
   point points[2];
   points[0].set_x(3);
   points[0].set_y(5);
-  
+
   points[1].set_x(8);
   points[2].set_y(1);
-  
+
   display_points(points, 2);
   return 0;
 }
@@ -64,7 +64,7 @@ int main() {
 
 In the example above, the `display_points` function has access to `point_arr` that is an array of `point` objects. Each element of the array is still accessible using the bracket notation, but take note this gives access to a `point` object. Therefore, we are able to access the data members and methods of the array element by combining the bracket notation with the dot notation. Specifically, the example shows how we access the ith element of `point_arr`, which is a `point` object, and call its `x()` method. This is possible because `x()` is a public method defined in the `point` class.
 
-# Common errors 
+# Common errors
 ## Passing an array and an array element are two different things
 This function call passes the entire array
 
@@ -75,16 +75,16 @@ display_values(arr_values, 3);
 While this function passes an element of an array. Take note of `square`'s parameter which is an `int` and not an array.
 
 ```cpp
-int square(int val) { 
-  return val * val; 
+int square(int val) {
+  return val * val;
 }
 
 int main() {
   int arr_values[3];
   arr_values[0] = 1;
-  arr_values[0] = 5;
-  arr_values[0] = 10;
-  
+  arr_values[1] = 5;
+  arr_values[2] = 10;
+
   int squared_value = square(arr_values[0]);
 }
 ```
