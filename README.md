@@ -27,7 +27,7 @@ int main() {
 ```
 
 # Common errors 
-## Passing the array and an array element are two different things
+## Passing an array and an array element are two different things
 This function call passes the entire array
 
 ```cpp
