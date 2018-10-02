@@ -55,7 +55,7 @@ int main() {
   points[0].set_y(5);
 
   points[1].set_x(8);
-  points[2].set_y(1);
+  points[1].set_y(1);
 
   display_points(points, 2);
   return 0;
