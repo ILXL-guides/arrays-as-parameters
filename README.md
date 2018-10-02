@@ -62,6 +62,8 @@ int main() {
 }
 ```
 
+In the example above, the `display_points` function has access to `point_arr` that is an array of `point` objects. Each element of the array is still accessible using the bracket notation, but take note this gives access to a `point` object. Therefore, we are able to access the data members and methods of the array element by combining the bracket notation with the dot notation. Specifically, the example shows how we access the ith element of `point_arr`, which is a `point` object, and call its `x()` method. This is possible because `x()` is a public method defined in the `point` class.
+
 # Common errors 
 ## Passing an array and an array element are two different things
 This function call passes the entire array
