@@ -1,10 +1,10 @@
 #include <iostream>
-using namespace std;
 
 void display_values(int values[], int size) {
-  for (int i = 0; i < size; i++)
-    cout << values[i] << " ";
-  cout << "\n";
+  for (int i = 0; i < size; i++) {
+    std::cout << values[i] << " ";
+  }
+  std::cout << "\n";
 }
 
 int main() {

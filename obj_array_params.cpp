@@ -1,23 +1,23 @@
 #include <iostream>
-using namespace std;
 
-class point {
+class Point {
 private:
-  int _x, _y;
+  int x_, y_;
+
 public:
-  int x() { return _x; }
-  void set_x(int x) { _x = x; }
-  int y() { return _y; }
-  void set_y(int y) { _y = y; }
+  int x() { return x_; }
+  void set_x(int x) { x_ = x; }
+  int y() { return y_; }
+  void set_y(int y) { y_ = y; }
 };
 
-void display_points(point point_arr[], int size) {
+void display_points(Point point_arr[], int size) {
   for (int i = 0; i < size; i++)
-    cout << point_arr[i].x() << ", " << point_arr[i].y() << "\n";
+    std::cout << point_arr[i].x() << ", " << point_arr[i].y() << "\n";
 }
 
 int main() {
-  point points[2];
+  Point points[2];
   points[0].set_x(3);
   points[0].set_y(5);
 
