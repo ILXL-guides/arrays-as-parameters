@@ -6,9 +6,10 @@ Below is an example of a function that receives an integer array and it's size. 
 
 ```cpp
 void display_values(int values[], int size) {
-  for (int i = 0; i < size; i++)
-    cout << values[i] << " ";
-  cout << "\n";
+  for (int i = 0; i < size; i++) {
+    std::cout << values[i] << " ";
+  }
+  std::cout << "\n";
 }
 ```
 
