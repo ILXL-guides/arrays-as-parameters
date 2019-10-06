@@ -39,9 +39,9 @@ class Point {
 private:
   int x_, y_;
 public:
-  int x() { return x_; }
+  int x() const { return x_; }
   void set_x(int x) { x_ = x; }
-  int y() { return y_; }
+  int y() const{ return y_; }
   void set_y(int y) { y_ = y; }
 };
 
